@@ -1,0 +1,10 @@
+<div class="card">
+  <div [ngSwitch]="dinosaur">
+    <img class="card-img-top" *ngSwitchCase="Dinosaur.name" [src]="assets/coco.jpg" alt="Card image cap">
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">{{ dinosaur.name }}</h5>
+  </div>
+
+</div>

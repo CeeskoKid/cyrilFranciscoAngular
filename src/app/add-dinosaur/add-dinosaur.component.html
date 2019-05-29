@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col"></div>
+  <div class="col">
+    <h1>Create Dinosaur</h1>
+  </div>
+  <div class="col"></div>
+</div>
+
+<div class="row">
+  <div class="col"></div>
+  <div class="col text-center">
+    <form class="form-group" (submit)="saveDinosaur()" #f="ngForm">
+      <label for="name">dinosaur name</label>
+      <input required #nameF="ngModel" [class.is-invalid]="nameF.touched && nameF.invalid"
+             [class.is-valid]="nameF.valid" class="form-control m-3" id="name" type="text" [(ngModel)]="dinosaur.name"
+             name="value">
+
+      <label for="raceId">dinosaur race id</label>
+      <input required #nameF="ngModel" [class.is-invalid]="nameF.touched && nameF.invalid"
+             [class.is-valid]="nameF.valid" class="form-control m-3" id="raceId" type="text"
+             [(ngModel)]="dinosaur.race.id" name="value">
+
+      <label for="parkId">park ID</label>
+      <input required #nameF="ngModel" [class.is-invalid]="nameF.touched && nameF.invalid"
+             [class.is-valid]="nameF.valid" class="form-control m-3" id="parkId" type="text" [(ngModel)]="park.id"
+             name="value">
+
+      <label for="working">is working</label>
+      <input required #nameF="ngModel" [class.is-invalid]="nameF.touched && nameF.invalid"
+             [class.is-valid]="nameF.valid" class="form-control m-3" id="working" type="text" [(ngModel)]="isWorking"
+             name="value">
+      <button class="btn btn-primary m-3" routerLink="/dinosaurs/">
+        create
+      </button>
+    </form>
+  </div>
+  <div class="col"></div>
+</div>
